@@ -16,6 +16,18 @@
 
 
         <main>
+
+            <dialog id="congrats-dialog" class="modal-content">
+                <button id="closeModal" class="star-close">&#9733;</button>
+
+                <div class="modal-body">
+                    <h2>Congrats!</h2>
+                    <img src="./images/splash.jpeg" alt="">
+                    <p>A Recyclable at a time saves lives!</p>
+                </div>
+            </dialog>
+
+
             <div id="input-view" class="view hidden">
                 <div class="icon">
                     <img id="hero" src="./images/download.png" alt="">
@@ -42,15 +54,19 @@
                 </div>
             </div>
 
-            <div id="results-view" class=" hidden view">
+            <div id="results-view" class=" view">
                 <h2>Classification Results</h2>
-                    <div class="result-card">
-                        <p><strong>Bin:</strong> <span id="bin"></span></p>
-                        <p><strong>Category:</strong> <span id="category"></span></p>
-                        <p><strong>Explanation:</strong> <span id="explanation"></span></p>
-                    </div>
-                    <button id="resetBtn">Upload Another</button>
+                <div class="result-card">
+                    <p><strong>Bin:</strong> <span id="bin">Blue</span></p>
+                    <p><strong>Category:</strong> <span id="category">Recyclable</span></p>
+                    <p><strong>Explanation:</strong> <span id="explanation">They are Recyclable because of this and this and this</span></p>
                 </div>
+                <div class="actions-footer">
+                    <button id="finishBtn" class="btn-primary-large"> Finish</button>
+                </div>
+            </div>
+
+
             </main>
 
 
