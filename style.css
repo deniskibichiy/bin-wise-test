@@ -1,3 +1,23 @@
+        :root {
+    
+    --green-100: #f7fcf5;
+    --green-200: #e5f5e0;
+    --green-300: #c7e9c0;
+    --green-400: #a1d99b;
+    --green-500: #74c476; 
+    --green-600: #41ab5d;
+    --green-700: #238b45;
+    --green-800: #006d2c;
+    --green-900: #00441b; 
+
+    --bg-main: var(--green-100);
+    --primary-action: var(--green-600);
+    --text-primary: var(--green-900);
+    --card-shadow: rgba(0, 68, 27, 0.1);
+}
+        
+        
+        
         .header {
             height: 100px;
         }
@@ -25,15 +45,18 @@
             display: none;
         }
 
+        #hidden {
+            display: none;
+        }
+
 
         .footer {
-            height: 100px;
-            background-color: #00441b;
+            height: 80px;
+            background-color: #a1d99b;
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-around; 
             align-items: center; 
             width: 100%; 
-            padding: 0; 
         }
 
 
@@ -49,9 +72,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 844px;
+            height: 604px;
             border: 2px solid black;
-            background-color: #e5f5e0;
+            background-color: --var(--green-100);
             overflow-y: auto;
             border-radius: 25px;
         }
@@ -87,12 +110,8 @@
             border: none;
             cursor: pointer;
             padding: 0; 
-        }
-
-        .footer-btn img {
-            width: 50px; 
+            width: 50px;
             height: 50px;
-            object-fit: contain;
         }
 
         .icon {
@@ -100,3 +119,105 @@
             justify-content: center;
             align-items: center;
         }
+
+        .hero-text {
+            font-size: 24px;
+            color: #006d2c;
+            text-align: center;
+        }
+
+        .image-frame {
+            width: 250px;
+            height: 200px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .preview-view {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+
+
+        .footer-btn {
+            width: 28px;
+            height: 28px;
+            stroke: black;
+            stroke-width: 2;
+            fill: none;
+            cursor: pointer;
+        }
+
+        .preview-text {
+            text-align: center;
+            margin-bottom: 24px;
+            padding: 0 10px;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 24px;
+            color: var(--green-800);
+        }
+
+        #preview-heading {
+            color: var(--green-700);
+        }
+
+
+    .preview-actions {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        width: 100%;
+        margin: 20px;
+        justify-content: space-around;
+    }
+
+    .btn-primary {
+        background-color: var(--green-700);
+        color: var(--green-100); 
+        border: none;
+        width: 40%;
+        padding: 10px;
+        border-radius: 16px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Hover/Active States for immediate feedback */
+    .btn-primary:active {
+        transform: scale(0.96); /* Tactile "sink" effect when pressed */
+        background-color: var(--green-800);
+        box-shadow: 0 2px 6px rgba(0, 68, 27, 0.3);
+    }
+
+    /* The "Safety Net" Button */
+    .btn-ghost {
+        background: transparent;
+        color: var(--green-700);
+        border: 2px solid var(--green-300);
+        padding: 14px;
+        width: 40%;
+        border-radius: 16px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }   
+
+    .btn-ghost:active {
+        background-color: var(--green-200);
+        border-color: var(--green-400);
+    }

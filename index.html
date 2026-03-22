@@ -7,44 +7,64 @@
     <title>Document</title>
 </head>
 <body>
+
+
     <div class="mobile-container">
         <header id="header">
             <h1>BinWise</h1>
         </header>
+
+
         <main>
-            <div class="icon">
-                <img id="hero" src="./images/download.png" alt="">
+            <div id="input-view" class="view hidden">
+                <div class="icon">
+                    <img id="hero" src="./images/download.png" alt="">
+                </div>
+                <div class="hero-text">
+                    <p><strong>Upload</strong> or <strong>capture an image</strong> to begin. Binnie will do the rest.</p>
+                </div>
             </div>
-            <div class="hero-text">
-                <p>Upload or capture an image to begin. Binnie will do the rest.</p>
+
+
+            <div id="preview-view" class="preview-card preview-view view hidden">
+                <div class="preview-text">
+                    <h3 id="preview-heading">Confirm Photo</h3>
+                    <p>Is the item clear and centered?</p>
+                </div>
+                <div class="image-frame">
+                    <img id="imagePreview" src="./images/trash.jpg" alt="Captured item">
+                </div>
+                <div class="preview-actions">
+                    <button id="classifyBtn" class="btn-primary">
+                        <span>Classify Item</span>
+                    </button>
+                    <button id="retakeBtn" class="btn-ghost">Retake Photo</button>
+                </div>
             </div>
-            <div id="classify" class="hidden">
-                <button id="classifyBtn">Classify Image</button>
-            </div>
-            <div>
-                <input type="file" id="imageInput" accept="image/*" style="display: none;">
-            </div>
-            <div id="previewContainer" style="margin-top:20px;">
-                <img id="imagePreview" src="" alt="Image Preview"
-                     style="display:none; border:1px solid #ccc; padding:5px;">
-            </div>
-            <div id="result" style="margin-top:20px; display: none">
-                <p><strong>Bin:</strong> <span id="bin"></span></p>
-                <p><strong>Category:</strong> <span id="category"></span></p>
-                <p><strong>Explanation:</strong> <span id="explanation"></span></p>
-            </div>
+
+            <div id="results-view" class=" hidden view">
+                <h2>Classification Results</h2>
+                    <div class="result-card">
+                        <p><strong>Bin:</strong> <span id="bin"></span></p>
+                        <p><strong>Category:</strong> <span id="category"></span></p>
+                        <p><strong>Explanation:</strong> <span id="explanation"></span></p>
+                    </div>
+                    <button id="resetBtn">Upload Another</button>
+                </div>
+            </main>
+
+
             <footer class="footer">
                 <button class="footer-btn">
-                    <img src="./images/home.jpeg" alt="Home">
+                     <svg id="btn-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                 </button>
                 <button class="footer-btn">
-                    <img src="./images/photo.jpeg" alt="Photos">
+                        <svg id="btn-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
                 </button>
                 <button class="footer-btn" id="uploadButton">
-                    <img id="uploadIcon" src="./images/upload.jpeg" alt="Upload">
+                        <svg id="btn-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
                 </button>
             </footer>
-        </main>
 
         <!-- app.js must load before frontend_ui.js -->
         <script src="./index.js"></script>
