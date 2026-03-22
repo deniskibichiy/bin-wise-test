@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mobile-container">
+        <header id="header">
+            <h1>BinWise</h1>
+        </header>
+        <main>
+            <div class="icon">
+                <img id="hero" src="./images/download.png" alt="">
+            </div>
+            <div id="classify">
+                <button id="classifyBtn">Classify Image</button>
+            </div>
+            <div>
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            </div>
+            <div id="previewContainer" style="margin-top:20px;">
+                <img id="imagePreview" src="" alt="Image Preview"
+                     style="display:none; border:1px solid #ccc; padding:5px;">
+            </div>
+            <div id="result" style="margin-top:20px; display: none">
+                <p><strong>Bin:</strong> <span id="bin"></span></p>
+                <p><strong>Category:</strong> <span id="category"></span></p>
+                <p><strong>Explanation:</strong> <span id="explanation"></span></p>
+            </div>
+            <footer class="footer">
+                <button class="footer-btn">
+                    <img src="./images/home.jpeg" alt="Home">
+                </button>
+                <button class="footer-btn">
+                    <img src="./images/photo.jpeg" alt="Photos">
+                </button>
+                <button class="footer-btn" id="uploadButton">
+                    <img id="uploadIcon" src="./images/upload.jpeg" alt="Upload">
+                </button>
+            </footer>
+        </main>
+
+        <!-- app.js must load before frontend_ui.js -->
+        <script src="./index.js"></script>
+    </div>
+</body>
+</html>
